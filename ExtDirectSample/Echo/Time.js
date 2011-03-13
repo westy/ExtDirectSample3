@@ -1,5 +1,5 @@
 ﻿Ext.Direct.addProvider(Sample.Remote.EchoHandler);
-Ext.onReady(function(){
+Ext.onReady(function () {
     var panel = new Ext.Panel({
         renderTo: 'container',
         width: 400,
@@ -8,9 +8,9 @@ Ext.onReady(function(){
         title: 'Current Time',
         tools: [{
             id: 'refresh',
-            handler: function(){
-                Sample.Echo.GetDate(function(data, trans){
-                    var s = String.format('The current date/time is: <b>{0}</b>', data.format('Y-m-d H:s'));
+            handler: function () {
+                Sample.Echo.GetDate(function (data, trans) {
+                    var s = String.format('The current date/time is: <b>{0}</b>', data.format('Y-m-d H:i:s'));
                     panel.body.update(s);
                 });
             }
