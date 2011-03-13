@@ -56,7 +56,7 @@ namespace ExtDirectSample.Grid
         }
 
         [DirectMethod]
-        [ParseAsJson]
+        //[ParseAsJson]
         public JObject Destroy(JObject o)
         {
             JValue val = (JValue)o["data"];
@@ -68,7 +68,7 @@ namespace ExtDirectSample.Grid
         }
 
         [DirectMethod]
-        [ParseAsJson]
+        //[ParseAsJson]
         public Company Create(JObject o)
         {
             Company c = JsonConvert.DeserializeObject<Company>(o["data"].ToString());
@@ -77,7 +77,7 @@ namespace ExtDirectSample.Grid
         }
 
         [DirectMethod]
-        [ParseAsJson]
+        //[ParseAsJson]
         public JObject Update(JObject o)
         {
             Company c = JsonConvert.DeserializeObject<Company>(o["data"].ToString());
